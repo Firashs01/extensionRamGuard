@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=320">
+  <title>TabSaver Pro</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="header__brand">
+      <span class="header__icon" aria-hidden="true">🛡️</span>
+      <h1 class="header__title tracking-tight">TabSaver Pro</h1>
+    </div>
+    <button class="header__settings" id="btn-settings" aria-label="Open settings">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M6.5 1.75a.75.75 0 0 1 1.5 0v.3a5.3 5.3 0 0 1 1.46.6l.21-.21a.75.75 0 1 1 1.06 1.06l-.21.21c.26.44.47.93.6 1.46h.3a.75.75 0 0 1 0 1.5h-.3a5.3 5.3 0 0 1-.6 1.46l.21.21a.75.75 0 1 1-1.06 1.06l-.21-.21c-.44.26-.93.47-1.46.6v.3a.75.75 0 0 1-1.5 0v-.3a5.3 5.3 0 0 1-1.46-.6l-.21.21a.75.75 0 0 1-1.06-1.06l.21-.21a5.3 5.3 0 0 1-.6-1.46h-.3a.75.75 0 0 1 0-1.5h.3c.13-.53.34-1.02.6-1.46l-.21-.21a.75.75 0 0 1 1.06-1.06l.21.21c.44-.26.93-.47 1.46-.6v-.3ZM8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5Z" fill="currentColor"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Stats Section -->
+  <section class="stats" aria-label="Extension statistics">
+    <div class="stats__grid">
+      <div class="stat-card">
+        <span class="stat-card__value tabular-nums" id="stat-sleeping">0</span>
+        <span class="stat-card__label">Sleeping</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-card__value tabular-nums" id="stat-ram">0 MB</span>
+        <span class="stat-card__label">RAM Saved</span>
+      </div>
+    </div>
+    <div class="progress" aria-label="Suspension progress">
+      <div class="progress__track">
+        <div class="progress__fill" id="progress-fill" style="width: 0%"></div>
+      </div>
+      <span class="progress__label" id="progress-label">0% suspended</span>
+    </div>
+  </section>
+
+  <!-- Actions Section -->
+  <section class="actions">
+    <button class="btn-primary" id="btn-suspend-all">
+      🛑 Suspend Other Tabs Now
+    </button>
+
+    <div class="whitelist-row" id="whitelist-row">
+      <span class="whitelist-row__host" id="whitelist-host">—</span>
+      <button class="toggle" id="toggle-whitelist" role="switch" aria-checked="false" aria-label="Toggle whitelist for current site">
+        <span class="toggle__track">
+          <span class="toggle__thumb"></span>
+        </span>
+      </button>
+    </div>
+
+    <div class="timer-pills" role="radiogroup" aria-label="Auto-suspend timer">
+      <button class="timer-pill" data-minutes="5">5m</button>
+      <button class="timer-pill" data-minutes="15">15m</button>
+      <button class="timer-pill active" data-minutes="30">30m</button>
+      <button class="timer-pill" data-minutes="60">1h</button>
+      <button class="timer-pill" data-minutes="0">Off</button>
+    </div>
+  </section>
+
+  <!-- Suspended Tabs List -->
+  <section class="tab-list" aria-label="Suspended tabs">
+    <h2 class="tab-list__heading">Suspended Tabs</h2>
+    <div class="tab-list__container" id="tab-list-container">
+      <p class="tab-list__empty" id="tab-list-empty">No suspended tabs</p>
+    </div>
+  </section>
+
+  <script src="../../dist/popup/popup.js"></script>
+</body>
+</html>

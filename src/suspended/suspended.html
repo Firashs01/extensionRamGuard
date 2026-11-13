@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tab Suspended</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="suspended.css">
+</head>
+<body>
+  <!-- Full-page click target to restore the tab -->
+  <div id="restore-overlay" role="button" tabindex="0" aria-label="Click anywhere to restore this tab">
+
+    <main class="card">
+      <div class="favicon-wrap">
+        <img id="favicon" class="favicon" src="" alt="" width="48" height="48">
+      </div>
+
+      <h1 id="page-title" class="title tracking-tight text-balance">Tab Suspended</h1>
+      <p id="page-url" class="url"></p>
+
+      <p class="restore-hint">💤 Click anywhere to restore</p>
+
+      <div class="actions">
+        <button id="btn-copy" class="btn-ghost" type="button" aria-label="Copy URL">
+          <span class="btn-icon">📋</span> Copy URL
+        </button>
+        <button id="btn-close" class="btn-ghost" type="button" aria-label="Close Tab">
+          <span class="btn-icon">✕</span> Close Tab
+        </button>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="../../dist/suspended/suspended.js"></script>
+</body>
+</html>

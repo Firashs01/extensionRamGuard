@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield shape -->
+  <path d="M64 8 L112 28 L112 64 Q112 100 64 120 Q16 100 16 64 L16 28 Z"
+        fill="url(#bg)" stroke="#047857" stroke-width="3"/>
+  <!-- Leaf / save icon -->
+  <path d="M52 50 Q64 38 76 50 Q88 62 76 78 Q64 90 52 78 Q40 62 52 50 Z"
+        fill="white" opacity="0.9"/>
+  <!-- Zzz sleep indicator -->
+  <text x="78" y="42" font-family="Arial,sans-serif" font-size="18" font-weight="bold" fill="white" opacity="0.85">💤</text>
+</svg>

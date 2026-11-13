@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TabSaver Pro — Settings</title>
+  <link rel="stylesheet" href="../styles/tokens.css">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <main class="card">
+    <h1 class="card-title tracking-tight text-balance">TabSaver Pro Settings</h1>
+
+    <!-- Safety Rules -->
+    <section class="section">
+      <h2 class="section-heading tracking-tight text-balance">Safety Rules</h2>
+      <div class="toggle-group">
+        <label class="toggle-row">
+          <span class="toggle-label">Never suspend tabs playing audio</span>
+          <input type="checkbox" id="neverSuspendAudible" class="toggle-input">
+          <span class="toggle-switch"></span>
+        </label>
+        <label class="toggle-row">
+          <span class="toggle-label">Never suspend pinned tabs</span>
+          <input type="checkbox" id="neverSuspendPinned" class="toggle-input">
+          <span class="toggle-switch"></span>
+        </label>
+        <label class="toggle-row">
+          <span class="toggle-label">Never suspend unsaved form tabs</span>
+          <input type="checkbox" id="neverSuspendDirtyForms" class="toggle-input">
+          <span class="toggle-switch"></span>
+        </label>
+        <label class="toggle-row">
+          <span class="toggle-label">Only auto-suspend on battery</span>
+          <input type="checkbox" id="onlyOnBattery" class="toggle-input">
+          <span class="toggle-switch"></span>
+        </label>
+        <label class="toggle-row">
+          <span class="toggle-label">Use Sleeping Placeholder page</span>
+          <input type="checkbox" id="usePlaceholderPage" class="toggle-input">
+          <span class="toggle-switch"></span>
+        </label>
+        <label class="toggle-row last">
+          <span class="toggle-label">Visual tab dimming (💤 prefix)</span>
+          <input type="checkbox" id="visualIndicators" class="toggle-input">
+          <span class="toggle-switch"></span>
+        </label>
+      </div>
+    </section>
+
+    <!-- Domain Whitelist -->
+    <section class="section">
+      <h2 class="section-heading tracking-tight text-balance">Domain Whitelist</h2>
+      <textarea
+        id="whitelist"
+        class="whitelist-textarea"
+        placeholder="One domain per line&#10;e.g. localhost&#10;mail.google.com&#10;*.figma.com"
+        spellcheck="false"
+      ></textarea>
+      <p class="save-status" id="saveStatus">✓ Saved automatically</p>
+    </section>
+
+    <!-- Stats -->
+    <section class="section section-last">
+      <h2 class="section-heading tracking-tight text-balance">Stats</h2>
+      <div class="stats">
+        <div class="stat-row">
+          <span class="stat-label">Total tabs suspended</span>
+          <span class="stat-value tabular-nums" id="totalSuspended">0</span>
+        </div>
+        <div class="stat-row">
+          <span class="stat-label">Estimated RAM saved</span>
+          <span class="stat-value tabular-nums" id="totalRamSaved">0 MB</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../../dist/options/options.js"></script>
+</body>
+</html>
